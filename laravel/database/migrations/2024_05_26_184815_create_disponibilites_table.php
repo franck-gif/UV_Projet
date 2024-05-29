@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('disponibilites', function (Blueprint $table) {
             $table->id();
             $table->foreignId("photographe_id")->constrained("photographes");
-            $table->date("Date");
+            $table->date("Date_debute");
+            $table->date("Date_fin");
             $table->time("Heure");
             $table->timestamps();
         });
