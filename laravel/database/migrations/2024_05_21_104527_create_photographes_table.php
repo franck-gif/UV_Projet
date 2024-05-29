@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('photographes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("user_id")->unique()->constrained("users");
             $table->string("nom");
             $table->string("ville");
             $table->string("pays");
